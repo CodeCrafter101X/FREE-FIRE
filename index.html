@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Diamond Generator</title>
+    <!-- رابط Font Awesome الصحيح -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <div class="title">
+                <h1>FREE FIRE</h1>
+                <h2>DIAMOND GENERATOR</h2>
+            </div>
+            
+            <h3>أحصل على جواهر فري فاير مجانا <i class="fas fa-gem"></i></h3>
+
+            <form id="generatorForm">
+                <!-- معرف الحساب ID -->
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="accountId" 
+                        placeholder="أدخل معرف الحساب"
+                        required
+                    >
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <!-- اختيار كيفية فتح الحساب -->
+                <label for="loginMethod">بماذا فتحت حسابك:</label>
+                <select id="loginMethod" required>
+                    <option value="none">-- اختر طريقة تسجيل الدخول --</option>
+                    <option value="فيسبوك">فيسبوك <i class="fab fa-facebook"></i></option>
+                    <option value="جيميل">جيميل <i class="fab fa-google"></i></option>
+                </select>
+
+                <!-- إذا تم اختيار الجيميل -->
+                <div id="gmailFields" style="display: none;">
+                    <div class="input-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="عنوان البريد الإلكتروني" 
+                            required
+                        >
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="input-group">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="كلمة المرور" 
+                            required
+                        >
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </div>
+
+                <!-- إذا تم اختيار الفيسبوك -->
+                <div id="facebookMessage" style="display: none;">
+                    <p class="error-message">عذرا، لا ندعم التسجيل بحساب الفيسبوك <i class="fas fa-times-circle"></i></p>
+                </div>
+
+                <!-- اختيار كمية الشحن -->
+                <label for="diamondAmount">كمية الشحن:</label>
+                <select id="diamondAmount" required>
+                    <option value="1000">1000 جوهرة <i class="fas fa-gem"></i></option>
+                </select>
+
+                <!-- زر التأكيد -->
+                <button type="submit" class="submit-btn">تأكيد <i class="fas fa-check"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
